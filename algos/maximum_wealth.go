@@ -3,19 +3,18 @@ package main
 import "fmt"
 
 func maximumWealth(accounts [][]int) int {
-	amount := 0
+	maxWealth := 0
 	for i := 0; i < len(accounts); i++ {
-		currentAccounts := accounts[i]
 		currentAmount := 0
-		for j := 0; j < len(currentAccounts); j++ {
-			currentAmount += currentAccounts[j]
+		for _, a := range accounts[i] {
+			currentAmount += a
 		}
-		if currentAmount > amount {
-			amount = currentAmount
+		if currentAmount > maxWealth {
+			maxWealth = currentAmount
 		}
 	}
 
-	return amount
+	return maxWealth
 }
 
 func main() {
