@@ -12,12 +12,7 @@ func minimumOperations(nums []int) int {
 		}
 	}
 
-	count := 0
-	for _, _ = range dict {
-		count++
-	}
-
-	return count
+	return len(dict)
 }
 
 func minimumOperations2(nums []int) int {
